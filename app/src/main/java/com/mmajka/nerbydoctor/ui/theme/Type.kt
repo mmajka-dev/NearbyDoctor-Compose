@@ -12,8 +12,25 @@ val Typography = Typography(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
-    )
-    /* Other default text styles to override
+    ),
+    h1 = TextStyle(
+        fontSize = 27.sp,
+        lineHeight = 31.sp,
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Bold,
+    ),
+    h2 = TextStyle(
+        fontSize = 24.sp,
+        lineHeight = 28.sp,
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Bold,
+    ),
+    h3 = TextStyle(
+        fontSize = 24.sp,
+        lineHeight = 28.sp,
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+    ),
     button = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.W500,
@@ -24,5 +41,4 @@ val Typography = Typography(
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp
     )
-    */
 )
