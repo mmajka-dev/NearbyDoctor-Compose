@@ -10,9 +10,19 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.mmajka.nerbydoctor.common.NavigationComponent
+import com.mmajka.nerbydoctor.common.Navigator
+import com.mmajka.nerbydoctor.ui.navtest.pageA
 import com.mmajka.nerbydoctor.ui.theme.NerbyDoctorTheme
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var navigator: Navigator
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    NavigationComponent(navigator = navigator)
                 }
             }
         }
