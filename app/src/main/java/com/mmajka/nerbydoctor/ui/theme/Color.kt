@@ -38,6 +38,7 @@ val Blue10 = Color(0x1A53A0EF)
 val ErrorAlert = Color(0xFFF05366)
 val Background = Color(0xFFFAFAFA)
 val Background_Dark = Color(0x1AFAFAFA)
+val Subtitle = Color(0xFF999999)
 
 val PurpleLight = Color(0xFFF5F2FF)
 val Orange = Color(0xFFFF8050)

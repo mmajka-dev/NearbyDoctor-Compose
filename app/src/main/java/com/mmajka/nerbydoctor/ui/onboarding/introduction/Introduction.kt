@@ -1,10 +1,10 @@
-package com.mmajka.nerbydoctor.ui.onboarding
+package com.mmajka.nerbydoctor.ui.onboarding.introduction
 
 import androidx.compose.runtime.Composable
 import com.ramcosta.composedestinations.annotation.Destination
 
-@Destination(start = true)
+@Destination
 @Composable
-fun WelcomePage() {
+fun Introduction() {
 
 }

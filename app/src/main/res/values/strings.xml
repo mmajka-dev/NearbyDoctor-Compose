@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">NerbyDoctor</string>
+    <string name="welcome_header">Welcome To Book Nearby</string>
+    <string name="welcome_subtitle">The best medical app for your health!</string>
+    <string name="welcome_are_you_doctor">Are you a doctor? Get here!</string>
 </resources>
