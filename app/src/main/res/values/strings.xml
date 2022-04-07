@@ -3,4 +3,6 @@
     <string name="welcome_header">Welcome To Book Nearby</string>
     <string name="welcome_subtitle">The best medical app for your health!</string>
     <string name="welcome_are_you_doctor">Are you a doctor? Get here!</string>
+    <string name="make_appointment">Make an appointment with doctor</string>
+    <string name="appointment_message">Access thousands of trusted Doctors instantly !</string>
 </resources>

@@ -37,7 +37,7 @@ val Typography = Typography(
         fontSize = 24.sp,
         lineHeight = 28.sp,
         fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
     ),
     subtitle1 = TextStyle(
         fontSize = 15.sp,

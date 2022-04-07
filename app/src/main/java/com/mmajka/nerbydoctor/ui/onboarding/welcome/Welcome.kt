@@ -21,7 +21,7 @@ import com.mmajka.nerbydoctor.ui.onboarding.welcome.WelcomeViewEvent
 import com.mmajka.nerbydoctor.ui.onboarding.welcome.WelcomeViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 
-@Destination(start = true)
+@Destination
 @Composable
 fun WelcomePage(
     viewModel: WelcomeViewModel = hiltViewModel()
