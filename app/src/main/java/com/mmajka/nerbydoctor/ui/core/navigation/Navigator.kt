@@ -1,10 +1,11 @@
-package com.mmajka.nerbydoctor.core.navigation
+package com.mmajka.nerbydoctor.ui.core.navigation
 
-import androidx.navigation.NamedNavArgument
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class Navigator @Inject constructor() {
 
     private val _navigationEvent =

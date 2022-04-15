@@ -1,7 +1,7 @@
 package com.mmajka.nerbydoctor
 
 import androidx.lifecycle.ViewModel
-import com.mmajka.nerbydoctor.core.navigation.Navigator
+import com.mmajka.nerbydoctor.ui.core.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
