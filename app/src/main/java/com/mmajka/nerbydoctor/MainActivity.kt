@@ -11,8 +11,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.mmajka.nerbydoctor.core.navigation.NavigationComponent
-import com.mmajka.nerbydoctor.core.navigation.Navigator
+import com.mmajka.nerbydoctor.ui.core.navigation.NavigationComponent
+import com.mmajka.nerbydoctor.ui.core.navigation.Navigator
 import com.mmajka.nerbydoctor.ui.onboarding.NavGraphs
 import com.mmajka.nerbydoctor.ui.theme.NerbyDoctorTheme
 import com.ramcosta.composedestinations.DestinationsNavHost

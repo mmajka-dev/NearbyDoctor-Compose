@@ -1,4 +1,4 @@
-package com.mmajka.nerbydoctor.core.navigation
+package com.mmajka.nerbydoctor.ui.core.navigation
 
 import com.ramcosta.composedestinations.spec.Direction
 

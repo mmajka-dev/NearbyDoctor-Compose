@@ -25,6 +25,7 @@ val Typography = Typography(
         lineHeight = 31.sp,
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Bold,
+        color = Color.Black
     ),
     h2 = TextStyle(
         fontSize = 24.sp,
@@ -38,6 +39,14 @@ val Typography = Typography(
         lineHeight = 28.sp,
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Bold,
+        color = Color.Black
+    ),
+    h4 = TextStyle(
+        fontSize = 28.sp,
+        lineHeight = 31.sp,
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Bold,
+        color = Color.Black
     ),
     subtitle1 = TextStyle(
         fontSize = 15.sp,

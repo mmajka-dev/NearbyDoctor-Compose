@@ -17,11 +17,12 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.mmajka.nerbydoctor.R
+import com.mmajka.nerbydoctor.ui.core.utils.Constants
 import com.mmajka.nerbydoctor.ui.onboarding.welcome.WelcomeViewEvent
 import com.mmajka.nerbydoctor.ui.onboarding.welcome.WelcomeViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 
-@Destination
+@Destination(start = true)
 @Composable
 fun WelcomePage(
     viewModel: WelcomeViewModel = hiltViewModel()
@@ -62,7 +63,7 @@ fun WelcomePage(
                     bottom.linkTo(button.top)
                 },
             painter = painterResource(id = R.drawable.img_welcome_doctors),
-            contentDescription = ""
+            contentDescription = Constants.NO_DESCRIPTION
         )
 
         Button(
@@ -78,7 +79,7 @@ fun WelcomePage(
         ) {
             Text(
                 modifier = Modifier.padding(vertical = 10.dp),
-                text = "Get Started"
+                text = stringResource(R.string.welcome_get_started)
             )
         }
         Text(

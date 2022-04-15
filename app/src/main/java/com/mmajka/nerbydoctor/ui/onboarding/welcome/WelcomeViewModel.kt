@@ -1,8 +1,8 @@
 package com.mmajka.nerbydoctor.ui.onboarding.welcome
 
 import androidx.lifecycle.ViewModel
-import com.mmajka.nerbydoctor.core.navigation.NavigationCommand
-import com.mmajka.nerbydoctor.core.navigation.Navigator
+import com.mmajka.nerbydoctor.ui.core.navigation.NavigationCommand
+import com.mmajka.nerbydoctor.ui.core.navigation.Navigator
 import com.mmajka.nerbydoctor.ui.onboarding.destinations.IntroductionDestination
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -14,11 +14,11 @@ class WelcomeViewModel @Inject constructor(
 
     fun onUiAction(action: WelcomeViewEvent) {
         when (action) {
-            WelcomeViewEvent.GetStartedClicked -> NavigateToIntroduction()
+            WelcomeViewEvent.GetStartedClicked -> navigateToIntroduction()
         }
     }
 
-    private fun NavigateToIntroduction() {
+    private fun navigateToIntroduction() {
         navigator(NavigationCommand.Navigate(IntroductionDestination))
     }
 }

@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
@@ -32,18 +33,21 @@ private const val PAGE_COUNT = 3
 
 @OptIn(
     ExperimentalPagerApi::class,
-    androidx.compose.ui.ExperimentalComposeUiApi::class
+    ExperimentalComposeUiApi::class
 )
-@Destination(start = true)
+@Destination
 @Composable
-fun Introduction() {
+fun Introduction(
+    viewModel: IntroductionViewModel = hiltViewModel()
+) {
     val pagerState = rememberPagerState()
+
     ConstraintLayout(
         modifier = Modifier
             .padding(24.dp)
             .fillMaxSize()
     ) {
-        val (pager, indicator, signIn, signUp) = createRefs()
+        val (pager, indicator, signIn, signUp, doctorButton) = createRefs()
 
         HorizontalPager(
             count = PAGE_COUNT,
@@ -56,27 +60,27 @@ fun Introduction() {
             }
         ) { page ->
             when (page) {
-                0 -> Page(
+                0 -> IntroductionPage(
                     image = R.drawable.img_appointment,
-                    header = stringResource(R.string.make_appointment),
-                    message = stringResource(R.string.appointment_message)
+                    header = stringResource(R.string.introduction_make_appointment),
+                    message = stringResource(R.string.introduction_message)
                 )
-                1 -> Page(
+                1 -> IntroductionPage(
                     image = R.drawable.img_find_doctor,
-                    header = stringResource(R.string.make_appointment),
-                    message = stringResource(R.string.appointment_message)
+                    header = stringResource(R.string.introduction_find_doctor),
+                    message = stringResource(R.string.introduction_message)
                 )
-                2 -> Page(
+                2 -> IntroductionPage(
                     image = R.drawable.img_advice,
-                    header = stringResource(R.string.make_appointment),
-                    message = stringResource(R.string.appointment_message)
+                    header = stringResource(R.string.introduction_take_advice),
+                    message = stringResource(R.string.introduction_message)
                 )
             }
         }
         HorizontalPagerIndicator(
             modifier = Modifier
                 .constrainAs(indicator) {
-                    bottom.linkTo(signIn.top, margin = 40.dp)
+                    bottom.linkTo(signIn.top, margin = 20.dp)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 },
@@ -93,77 +97,42 @@ fun Introduction() {
                     end.linkTo(parent.end)
                     width = Dimension.fillToConstraints
                 },
-            onClick = { }
+            onClick = { viewModel.onUiAction(IntroductionViewEvent.SignInClicked) }
         ) {
             Text(
                 modifier = Modifier.padding(vertical = 10.dp),
-                text = "Sign In"
+                text = stringResource(R.string.common_sing_in)
             )
         }
-
         OutlinedButton(
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .constrainAs(signUp) {
-                    bottom.linkTo(parent.bottom)
+                    bottom.linkTo(doctorButton.top, margin = 35.dp)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     width = Dimension.fillToConstraints
                 },
-            onClick = { }
+            onClick = { viewModel.onUiAction(IntroductionViewEvent.SingUpClicked) }
         ) {
             Text(
                 modifier = Modifier.padding(vertical = 10.dp),
-                text = "Create Account"
+                text = stringResource(R.string.common_create_account)
             )
         }
-    }
-}
-
-@OptIn(ExperimentalComposeUiApi::class)
-@Composable
-private fun Page(image: Int, header: String = "", message: String = "") {
-    ConstraintLayout(modifier = Modifier.fillMaxWidth()) {
-        val (img, title, subtitle) = createRefs()
-
-        Image(
+        Text(
             modifier = Modifier
-                .size(height = 400.dp, width = 260.dp)
-                .constrainAs(img) {
-                    top.linkTo(parent.top)
+                .constrainAs(doctorButton) {
+                    bottom.linkTo(parent.bottom)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                    width = Dimension.fillToConstraints
                 },
-            painter = painterResource(id = image),
-            contentDescription = "",
-            contentScale = ContentScale.Crop
-        )
-        Text(
-            modifier = Modifier.constrainAs(title) {
-                top.linkTo(img.bottom, margin = 40.dp)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-            },
-            text = header,
-            style = MaterialTheme.typography.h3,
-            color = Color.Black,
-            textAlign = TextAlign.Center
-        )
-        Text(
-            modifier = Modifier.constrainAs(subtitle) {
-                top.linkTo(title.bottom, margin = 10.dp)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                width = Dimension.fillToConstraints
-            },
-            text = message,
-            color = Color.Black,
+            text = stringResource(R.string.welcome_are_you_doctor),
+            style = MaterialTheme.typography.body2,
             textAlign = TextAlign.Center
         )
     }
 }
-
 
 @Composable
 @Preview(showBackground = true)

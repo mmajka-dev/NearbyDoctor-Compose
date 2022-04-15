@@ -1,8 +1,52 @@
 <resources>
     <string name="app_name">NerbyDoctor</string>
+
+    <!--Common-->
+    <string name="common_your_id">Your ID</string>
+    <string name="common_password">Password</string>
+    <string name="common_confirm_password">Confirm password</string>
+    <string name="common_email">Email</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_not_now">Not now</string>
+    <string name="common_set_new_password">Set New Password</string>
+    <string name="common_sing_in">Sign In</string>
+    <string name="common_create_account">Create Account</string>
+
+    <!--Welcome-->
     <string name="welcome_header">Welcome To Book Nearby</string>
     <string name="welcome_subtitle">The best medical app for your health!</string>
     <string name="welcome_are_you_doctor">Are you a doctor? Get here!</string>
-    <string name="make_appointment">Make an appointment with doctor</string>
-    <string name="appointment_message">Access thousands of trusted Doctors instantly !</string>
+    <string name="welcome_get_started">Get Started</string>
+
+    <!--Introduction-->
+    <string name="introduction_make_appointment">Make an appointment with doctor</string>
+    <string name="introduction_message">Access thousands of trusted Doctors instantly!</string>
+    <string name="introduction_sign_up_create_account">Create Account</string>
+    <string name="introduction_find_doctor">Find a doctor quickly</string>
+    <string name="introduction_take_advice">Take medical advice online</string>
+
+    <!--Biometric-->
+    <string name="biometric_enable">Enable Fingerprint</string>
+    <string name="biometric_description">If you enable Touch ID, you don’t need\nto enter your password when you sign in.</string>
+
+    <!--Phone number-->
+    <string name="phone_number_what_is_my_password">What\'s My Password?</string>
+    <string name="phone_number_description">If you have forgotten your password\nyou can reset it here.</string>
+    <string name="phone_number_your_number">Your phone number</string>
+    <string name="phone_number_get_code">Get Code</string>
+
+    <!--Set password-->
+    <string name="set_password">Set password</string>
+
+    <!--Verify code-->
+    <string name="verify_code">Verify Code</string>
+    <string name="verify_code_description">We\'ll text you on %1s</string>
+    <string name="verify_code_send_new_code">Send me a new code</string>
+
+    <!--Sign In-->
+    <string name="sign_in_forgot_password">Forgot password</string>
+    <string name="sign_in_create_account">Don\'t have an account? Sign Up!</string>
+    <string name="sign_in_or_sign_with">Or sign in with</string>
+
+
 </resources>

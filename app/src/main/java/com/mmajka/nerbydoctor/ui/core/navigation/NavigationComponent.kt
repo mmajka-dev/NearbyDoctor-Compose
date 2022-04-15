@@ -1,4 +1,4 @@
-package com.mmajka.nerbydoctor.core.navigation
+package com.mmajka.nerbydoctor.ui.core.navigation
 
 import android.util.Log
 import androidx.compose.runtime.Composable
@@ -25,7 +25,10 @@ fun NavigationComponent(
         }.launchIn(this)
     }
 
-    DestinationsNavHost(navGraph = NavGraphs.root)
+    DestinationsNavHost(
+        navGraph = NavGraphs.root,
+        navController = navController
+    )
 }
 
 private fun onCommand(
